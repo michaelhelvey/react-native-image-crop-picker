@@ -208,12 +208,6 @@ RCT_EXPORT_METHOD(openPicker:(NSDictionary *)options
                 imagePickerController.assetCollectionSubtypes = albumsToShow;
             }
 
-            if ([[self.options objectForKey:@"cropping"] boolValue]) {
-                imagePickerController.mediaType = QBImagePickerMediaTypeImage;
-            } else {
-                imagePickerController.mediaType = QBImagePickerMediaTypeAny;
-            }
-
             [[self getRootVC] presentViewController:imagePickerController animated:YES completion:nil];
         });
     }];
